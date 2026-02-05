@@ -1,3 +1,9 @@
 <Solution>
-  <Project Path="Shipments.Api/Shipments.Api.csproj" />
+  <Folder Name="/src/">
+    <Project Path="Shipments.Api/Shipments.Api.csproj" />
+    <Project Path="Shipments.Application/Shipments.Application.csproj" />
+    <Project Path="Shipments.Domain/Shipments.Domain.csproj" />
+    <Project Path="Shipments.Infrastructure/Shipments.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/" />
 </Solution>
