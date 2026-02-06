@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Shipments.Application.Abstraction;
 using Shipments.Application.Abstractions;
+using Shipments.Application.UseCases;
 using Shipments.Infrastructure.Configuration;
 using Shipments.Infrastructure.Messaging;
 using Shipments.Infrastructure.Outbox;
@@ -21,6 +22,7 @@ public static class DependencyInjection
             opt.UseNpgsql(config.GetConnectionString("ShipmentsDb")));
 
         services.AddScoped<IShipmentsDbContext>(sp => sp.GetRequiredService<ShipmentsDbContext>());
+        services.AddScoped<IDocumentProcessingUseCase, DocumentProcessingUseCase>();
 
         services.Configure<RuntimeOptions>(config.GetSection(RuntimeOptions.SectionName));
         services.Configure<BlobStorageOptions>(config.GetSection(BlobStorageOptions.SectionName));

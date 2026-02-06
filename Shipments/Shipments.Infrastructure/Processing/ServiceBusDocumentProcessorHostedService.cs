@@ -1,12 +1,13 @@
-﻿using System.Text.Json;
-using Azure.Messaging.ServiceBus;
+﻿using Azure.Messaging.ServiceBus;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Shipments.Application.Abstractions;
 using Shipments.Application.Messages;
+using Shipments.Application.UseCases;
 using Shipments.Infrastructure.Messaging;
+using System.Text.Json;
 
 namespace Shipments.Infrastructure.Processing;
 
