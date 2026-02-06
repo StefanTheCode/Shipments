@@ -42,7 +42,6 @@ public class ShipmentConfiguration : IEntityTypeConfiguration<Shipment>
         b.Property(x => x.ProcessedAt)
             .HasColumnName("processed_at");
 
-        // 1-N
         b.HasMany(x => x.Documents)
             .WithOne(x => x.Shipment)
             .HasForeignKey(x => x.ShipmentId)

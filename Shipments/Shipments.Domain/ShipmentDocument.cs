@@ -14,10 +14,9 @@ public class ShipmentDocument
 
     public DateTimeOffset UploadedAt { get; private set; } = DateTimeOffset.UtcNow;
 
-    // Optional but "senior": idempotency / dedupe
     public string? ContentSha256 { get; private set; }
 
-    private ShipmentDocument() { } // EF
+    private ShipmentDocument() { }
 
     public ShipmentDocument(Guid shipmentId, string blobName, string fileName, string contentType, long size, string? contentSha256 = null)
     {

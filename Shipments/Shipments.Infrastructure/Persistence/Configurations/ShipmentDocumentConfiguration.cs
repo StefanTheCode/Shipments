@@ -43,10 +43,7 @@ public class ShipmentDocumentConfiguration : IEntityTypeConfiguration<ShipmentDo
             .HasColumnName("content_sha256")
             .HasMaxLength(64);
 
-        // "Senior": indeks za brži lookup po shipmentu
         b.HasIndex(x => x.ShipmentId);
-
-        // "Senior": sprečava duple unose istog blob-a za istu pošiljku
         b.HasIndex(x => new { x.ShipmentId, x.BlobName }).IsUnique();
     }
 }
