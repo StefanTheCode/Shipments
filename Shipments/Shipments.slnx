@@ -6,5 +6,7 @@
     <Project Path="Shipments.Infrastructure/Shipments.Infrastructure.csproj" />
     <Project Path="Shipments.Worker/Shipments.Worker.csproj" Id="ff185c63-e983-4f68-a8c5-0f76b92a2fbd" />
   </Folder>
-  <Folder Name="/tests/" />
+  <Folder Name="/tests/">
+    <Project Path="Shipments.Tests/Shipments.Tests.csproj" Id="64eb1e38-98e7-466a-ab0f-013cb392b5e0" />
+  </Folder>
 </Solution>

@@ -37,4 +37,17 @@ public class Shipment
         Status = ShipmentStatus.Processed;
         ProcessedAt = DateTimeOffset.UtcNow;
     }
+
+    public static Shipment Create(string referenceNumber, string sender, string recipient)
+    {
+        return new Shipment
+        {
+            Id = Guid.NewGuid(),
+            ReferenceNumber = referenceNumber,
+            Sender = sender,
+            Recipient = recipient,
+            Status = ShipmentStatus.Created
+        };
+    }
+
 }
